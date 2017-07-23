@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2017-09-24" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.5" locale="en_US">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Name" width="167" order="0"/>
+        <field id="tpd4" name="Begin date" width="65" order="1"/>
+        <field id="tpd5" name="End date" width="64" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Learning Tensorflow" meeting="false" start="2017-07-24" duration="6" complete="0" expand="true"/>
+        <task id="2" name="Create a simple NNet with TensorFlow for Time Series" color="#8cb6ce" meeting="false" start="2017-08-01" duration="7" complete="0" expand="true"/>
+        <task id="5" name="Create a simple time-series predictor" color="#8cb6ce" meeting="false" start="2017-08-10" duration="12" complete="0" expand="true">
+            <notes><![CDATA[this predictor is just based on normal/RNN and it just predict one of these three situations: goes up, goes down, no change.
+For this we use the minimal data for training.]]></notes>
+        </task>
+        <task id="8" name="Connect to IQOptions" color="#8cb6ce" meeting="false" start="2017-08-28" duration="10" complete="0" expand="true">
+            <notes><![CDATA[For this task I need to do below things:
+- getting the current price
+- If possible getting the previous prices
+- Storing the current price in a file for learning and prediction
+- putting order on a demo account
+- cancel order]]></notes>
+        </task>
+        <task id="13" name="Gathering results and making progress" color="#8cb6ce" meeting="false" start="2017-09-11" duration="6" complete="0" expand="true">
+            <notes><![CDATA[In this task I should gather the results both for machine learning part(accuracy) and also for the software/API part and I solve the problems and prepare everything for building a fully automated trading software.]]></notes>
+        </task>
+        <task id="15" name="Fully Automated Software" color="#8cb6ce" meeting="false" start="2017-09-18" duration="14" complete="0" expand="true">
+            <notes><![CDATA[In this task I have to assemble everything and create a fully automated trading software.
+This trading softeware must have below features:
+- It must be able to predict the next 3 time steps
+- It must get the current price from the server and store it into a file and use the previous prices to predict the future
+- It must be able to put orders(buy and sell)
+- It must be able to cancle the order
+- It must stop trading after 5 continues loss or 80% loss in the last 10 trades
+- It must be able to put order for 1% of equity
+- It must be able to record all the actions that it does(loging all gains and losses)]]></notes>
+        </task>
+        <task id="18" name="Running the softwre on a demo account" color="#8cb6ce" meeting="false" start="2017-10-09" duration="6" complete="0" expand="true">
+            <notes><![CDATA[In this task I should run the software on a demo account for a week, 24h a day]]></notes>
+        </task>
+        <task id="20" name="Debugging the weekly demo run" color="#8cb6ce" meeting="false" start="2017-10-16" duration="5" complete="0" expand="true">
+            <notes><![CDATA[In this task I must debug the software and prepare it for a live run]]></notes>
+        </task>
+        <task id="22" name="Live Run" color="#8cb6ce" meeting="false" start="2017-10-23" duration="5" complete="0" expand="true">
+            <notes><![CDATA[In this task I start a live run for the software and it will run on my account with 100Eur for at leas one week]]></notes>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
